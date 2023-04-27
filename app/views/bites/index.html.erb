@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Bites</h1>
+
+
+
+<div id="bites">
+  <% @bites.each do |bite| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%=bite.image%>">
+
+      <div class="card-body">
+      
+        <h5 class="card-title"><%= link_to bite.name, bite%></h5>
+        <p class="card-text"><%= bite.description%></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <l="list-group-item">Price: $<%= bite.price%></li>
+      </ul>
+    </div>
+    <br/>
+  <% end %>
+</div>

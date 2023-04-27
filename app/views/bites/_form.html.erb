@@ -1,0 +1,39 @@
+
+
+<%= form_with(model: bite) do |form| %>
+  <% if bite.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bite.errors.count, "error") %> prohibited this bite from being saved:</h2>
+
+      <ul>
+        <% bite.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :image, class:"form-control", placeholder:"Image" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+    <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+    <%= form.text_area :description, class:"form-control", placeholder:"Description" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+    <%= form.text_field :price, class:"form-control", placeholder:"Price" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :bite_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+<br/>
+  <div>
+    <%= form.submit "Create Bite", class:"btn btn-outline-secondary"%>
+  </div>
+<% end %>

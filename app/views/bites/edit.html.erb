@@ -1,0 +1,13 @@
+<h1>Editing bite</h1>
+
+<%= render "form", bite: @bite %>
+
+<br>
+<%= button_to "Delete bite", @bite, method: :delete, class:"btn btn-danger " %>
+<br>
+
+<div>
+  <%= link_to "Show this bite", @bite %> |
+  <%= link_to "Back to bites", bites_path %>
+
+</div>
