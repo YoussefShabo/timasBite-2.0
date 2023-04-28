@@ -16844,3 +16844,342 @@ Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 952)
 ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=2):
   
 app/controllers/bites_controller.rb:72:in `set_bite'
+Started GET "/" for ::1 at 2023-04-27 17:30:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 294)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 100.7ms | Allocations: 10357)
+  Rendered layout layouts/application.html.erb (Duration: 425.6ms | Allocations: 48600)
+Completed 200 OK in 528ms (Views: 458.9ms | ActiveRecord: 2.5ms | Allocations: 51805)
+
+
+Started GET "/home/about" for ::1 at 2023-04-27 17:30:24 -0600
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.9ms | Allocations: 101)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 7.9ms | Allocations: 1067)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3688)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 4.4ms | Allocations: 3954)
+
+
+Started GET "/bites" for ::1 at 2023-04-27 17:30:24 -0600
+Processing by BitesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bites/index.html.erb within layouts/application
+  [1m[36mBite Load (0.6ms)[0m  [1m[34mSELECT "bites".* FROM "bites"[0m
+  ↳ app/views/bites/index.html.erb:8
+  Rendered bites/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 5479)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 6.3ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 8948)
+Completed 200 OK in 47ms (Views: 36.2ms | ActiveRecord: 1.2ms | Allocations: 10689)
+
+
+Started GET "/2.jpg" for ::1 at 2023-04-27 17:30:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2023-04-27 17:30:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/bites/new" for ::1 at 2023-04-27 17:30:28 -0600
+Processing by BitesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bites/new.html.erb within layouts/application
+  Rendered bites/_form.html.erb (Duration: 15.5ms | Allocations: 1518)
+  Rendered bites/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1818)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 4411)
+Completed 200 OK in 77ms (Views: 29.6ms | ActiveRecord: 0.2ms | Allocations: 9776)
+
+
+Started GET "/bites/2.jpg" for ::1 at 2023-04-27 17:30:28 -0600
+Processing by BitesController#show as JPEG
+  Parameters: {"id"=>"2"}
+  [1m[36mBite Load (0.2ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1582)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=2):
+  
+app/controllers/bites_controller.rb:72:in `set_bite'
+Started GET "/bites/1.jpg" for ::1 at 2023-04-27 17:30:29 -0600
+Processing by BitesController#show as JPEG
+  Parameters: {"id"=>"1"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+Completed 404 Not Found in 8ms (ActiveRecord: 1.5ms | Allocations: 1121)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=1):
+  
+app/controllers/bites_controller.rb:72:in `set_bite'
+Started GET "/bites" for ::1 at 2023-04-27 17:30:38 -0600
+Processing by BitesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bites/index.html.erb within layouts/application
+  [1m[36mBite Load (0.2ms)[0m  [1m[34mSELECT "bites".* FROM "bites"[0m
+  ↳ app/views/bites/index.html.erb:8
+  Rendered bites/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 994)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1094)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4426)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 4700)
+
+
+Started GET "/1.jpg" for ::1 at 2023-04-27 17:30:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2023-04-27 17:30:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/bites/11" for ::1 at 2023-04-27 17:30:40 -0600
+Processing by BitesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+  Rendering layout layouts/application.html.erb
+  Rendering bites/show.html.erb within layouts/application
+  Rendered bites/_bite.html.erb (Duration: 0.8ms | Allocations: 237)
+  Rendered bites/show.html.erb within layouts/application (Duration: 47.0ms | Allocations: 10231)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 25.7ms | Allocations: 1045)
+  Rendered layout layouts/application.html.erb (Duration: 114.9ms | Allocations: 13606)
+Completed 200 OK in 123ms (Views: 118.5ms | ActiveRecord: 0.3ms | Allocations: 14451)
+
+
+Started GET "/bites/1.jpg" for ::1 at 2023-04-27 17:30:41 -0600
+Started GET "/bites/2.jpg" for ::1 at 2023-04-27 17:30:41 -0600
+Processing by BitesController#show as JPEG
+  Parameters: {"id"=>"2"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 954)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=2):
+  
+app/controllers/bites_controller.rb:72:in `set_bite'
+Processing by BitesController#show as JPEG
+  Parameters: {"id"=>"1"}
+  [1m[36mBite Load (0.2ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+Completed 404 Not Found in 103ms (ActiveRecord: 0.2ms | Allocations: 34632)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=1):
+  
+app/controllers/bites_controller.rb:72:in `set_bite'
+Started GET "/bites/11/edit" for ::1 at 2023-04-27 17:30:42 -0600
+Processing by BitesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mBite Load (0.2ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."user_id" = ? AND "bites"."id" = ? LIMIT ?[0m  [["user_id", 13], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:64:in `correct_user'
+  Rendering layout layouts/application.html.erb
+  Rendering bites/edit.html.erb within layouts/application
+  Rendered bites/_form.html.erb (Duration: 2.4ms | Allocations: 788)
+  Rendered bites/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1350)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3934)
+Completed 200 OK in 32ms (Views: 15.6ms | ActiveRecord: 1.9ms | Allocations: 7227)
+
+
+Started GET "/bites/11/1.jpg" for ::1 at 2023-04-27 17:30:42 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/bites/11/1.jpg"):
+  
+Started GET "/bites" for ::1 at 2023-04-27 17:30:49 -0600
+Processing by BitesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bites/index.html.erb within layouts/application
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites"[0m
+  ↳ app/views/bites/index.html.erb:8
+  Rendered bites/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 955)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4339)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 4613)
+
+
+Started GET "/2.jpg" for ::1 at 2023-04-27 17:30:49 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2023-04-27 17:30:49 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/users/sign_out" for ::1 at 2023-04-27 17:30:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/2.jpg" for ::1 at 2023-04-27 17:30:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/2.jpg"):
+  
+Started GET "/users/1.jpg" for ::1 at 2023-04-27 17:30:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/1.jpg"):
+  
+Started GET "/bites" for ::1 at 2023-04-27 17:31:02 -0600
+Processing by BitesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bites/index.html.erb within layouts/application
+  [1m[36mBite Load (0.2ms)[0m  [1m[34mSELECT "bites".* FROM "bites"[0m
+  ↳ app/views/bites/index.html.erb:8
+  Rendered bites/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 967)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 3.8ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 4351)
+Completed 200 OK in 58ms (Views: 41.6ms | ActiveRecord: 0.3ms | Allocations: 4623)
+
+
+Started GET "/2.jpg" for ::1 at 2023-04-27 17:31:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2023-04-27 17:31:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/users/edit" for ::1 at 2023-04-27 17:31:04 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 232)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 45.4ms | Allocations: 5150)
+  Rendered home/_header.html.erb (Duration: 9.0ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 109.2ms | Allocations: 7848)
+Completed 200 OK in 136ms (Views: 127.5ms | ActiveRecord: 0.3ms | Allocations: 10119)
+
+
+Started GET "/users/2.jpg" for ::1 at 2023-04-27 17:31:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/2.jpg"):
+  
+Started GET "/users/1.jpg" for ::1 at 2023-04-27 17:31:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/1.jpg"):
+  
+Started GET "/bites" for ::1 at 2023-04-27 17:31:17 -0600
+Processing by BitesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bites/index.html.erb within layouts/application
+  [1m[36mBite Load (0.3ms)[0m  [1m[34mSELECT "bites".* FROM "bites"[0m
+  ↳ app/views/bites/index.html.erb:8
+  Rendered bites/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 964)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4348)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 4624)
+
+
+Started GET "/2.jpg" for ::1 at 2023-04-27 17:31:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2023-04-27 17:31:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/bites/10" for ::1 at 2023-04-27 17:31:23 -0600
+Processing by BitesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+  Rendering layout layouts/application.html.erb
+  Rendering bites/show.html.erb within layouts/application
+  Rendered bites/_bite.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered bites/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 402)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 9.3ms | Allocations: 1045)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 3777)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.7ms | Allocations: 4539)
+
+
+Started GET "/bites/1.jpg" for ::1 at 2023-04-27 17:31:23 -0600
+Processing by BitesController#show as JPEG
+  Parameters: {"id"=>"1"}
+  [1m[36mBite Load (1.2ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+Completed 404 Not Found in 12ms (ActiveRecord: 1.2ms | Allocations: 952)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=1):
+  
+app/controllers/bites_controller.rb:72:in `set_bite'
+Started GET "/bites/2.jpg" for ::1 at 2023-04-27 17:31:23 -0600
+Processing by BitesController#show as JPEG
+  Parameters: {"id"=>"2"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+Completed 404 Not Found in 19ms (ActiveRecord: 0.1ms | Allocations: 952)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bite with 'id'=2):
+  
+app/controllers/bites_controller.rb:72:in `set_bite'
+Started GET "/bites/10/edit" for ::1 at 2023-04-27 17:31:25 -0600
+Processing by BitesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:72:in `set_bite'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mBite Load (2.5ms)[0m  [1m[34mSELECT "bites".* FROM "bites" WHERE "bites"."user_id" = ? AND "bites"."id" = ? LIMIT ?[0m  [["user_id", 13], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/bites_controller.rb:64:in `correct_user'
+Redirected to http://localhost:3000/bites
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 2.7ms | Allocations: 2898)
+
+
+Started GET "/bites" for ::1 at 2023-04-27 17:31:25 -0600
+Processing by BitesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bites/index.html.erb within layouts/application
+  [1m[36mBite Load (0.1ms)[0m  [1m[34mSELECT "bites".* FROM "bites"[0m
+  ↳ app/views/bites/index.html.erb:8
+  Rendered bites/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2338)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:16
+  Rendered home/_header.html.erb (Duration: 12.9ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 5722)
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 0.2ms | Allocations: 5997)
+
+
+Started GET "/bites/10/2.jpg" for ::1 at 2023-04-27 17:31:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/bites/10/2.jpg"):
+  
+Started GET "/bites/10/1.jpg" for ::1 at 2023-04-27 17:31:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/bites/10/1.jpg"):
+  
