@@ -13,3 +13,71 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+ body{
+background-color: white;
+}
+.carousel-item{
+    width: 100vw;
+    height: 90vh;
+}
+.d-block{
+    object-fit: cover;
+    object-position: 0 -200px;
+}
+.homeTxt{
+    text-align: center;
+    width: 55%;
+}
+.logoBlk{
+    width: 30%;
+    filter: drop-shadow(0px 0px 10px #5b5b5b);
+}
+.pg2{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.card{
+    width: 90%;
+    margin: 5%;
+}
+.form-container{
+    width: 90%;
+    margin: 5%;
+}
+.link{
+    margin-left: 5%;
+}
+.headTxt{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.showImg{
+    width: 95%;
+    height: 500px;
+    background-color: #d0d0d0;
+}
+.notice{
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgb(173, 222, 169);
+}
+.cardImg{
+    background-color: #d0d0d0;
+    min-height: 150px;
+}
+.showCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.carousel{
+    height: 90vh;
+}

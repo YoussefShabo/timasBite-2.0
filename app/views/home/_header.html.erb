@@ -1,6 +1,12 @@
+<%= stylesheet_link_tag 'header' %>
+<body class="<%= controller_name == 'about' && action_name == 'index' ? 'about' : '' %>">
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
-  <%= link_to "Tima's Bite", root_path, class: "navbar-brand" %>
+
+  <%= link_to root_path do %>
+    <%= image_tag("logo2.png", class: "logo", alt: "My Website Logo") %>
+  <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,7 +24,10 @@
                 <%= link_to "New Bite", new_bite_path, class: "nav-link"   %>
             </li>
             <li class="nav-item">
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= link_to "Sign out", destroy_user_session_path, method: :post, data: { confirm: "Are you sure you want to sign out?" }, class: "nav-link" %>
+
+          </li>
+          
 
             </li>
             <li class="nav-item">

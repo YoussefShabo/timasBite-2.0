@@ -1,1 +1,12 @@
+<%= stylesheet_link_tag 'about', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="container">
 <h1>About Us</h1>
+<p>We believe good food doesn't have to be complicated or expensive. We believe in creating meals that are good to your body and mind, meals that make you feel full and healthy, meals that make you want to brag on social media, meals that will make you want your leftovers (no, really). We believe you can have all of this without spending your whole paycheck, buying a bunch of fancy kitchenware, or spending all day in the kitchen. We believe you can spend less and enjoy more.</p>
+<button class="btn btn-outline-light btn-sm">Join our mailing list</button>
+<button class="btn btn-outline-light btn-sm">
+<%= link_to "Sign Up", new_user_registration_path, class: "nav-link"   %>
+</button>
+</div>
+<%= image_tag 'TB-Headshot.jpg', class: 'headshot' %>
+<%= image_tag 'TB-Logo.jpg', class: 'TBlogo' %>

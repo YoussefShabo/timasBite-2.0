@@ -1,6 +1,4 @@
-
-
-<%= form_with(model: bite) do |form| %>
+<%= form_with(model: bite, local: true, html: {multipart: true}) do |form| %>
   <% if bite.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(bite.errors.count, "error") %> prohibited this bite from being saved:</h2>
@@ -12,11 +10,15 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form-container">
   <div class="field form-group">
-    <%= form.text_field :image, class:"form-control", placeholder:"Image" %>
-  </div>
-  <br/>
+  <%= form.file_field :image, class: "form-control", placeholder: "Image" %>
+</div>
+
+  <%= image_tag '' %>
+
+
+<br/>
   <div class="field form-group">
     <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
   </div>
@@ -34,6 +36,7 @@
   </div>
 <br/>
   <div>
-    <%= form.submit "Create Bite", class:"btn btn-outline-secondary"%>
+    <%= form.submit "Submit", class:"btn btn-outline-secondary"%>
+  </div>
   </div>
 <% end %>

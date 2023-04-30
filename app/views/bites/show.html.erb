@@ -1,12 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 
 <%= render @bite %>
 
 
   <div>
-    <%= link_to "Edit bite", edit_bite_path(@bite), class:"btn btn-outline-secondary btn-sm" %>
+    <%= link_to "Edit bite", edit_bite_path(@bite), class:"btn btn-outline-secondary btn-sm link" %>
     <br/>
     <br/>
   </div>
 
-<%= link_to "Back to bites", bites_path, class:"btn btn-outline-secondary btn-sm" %>
+<%= link_to "Back to bites", bites_path, class:"btn btn-outline-secondary btn-sm link" %>

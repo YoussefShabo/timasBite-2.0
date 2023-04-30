@@ -1,13 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green" class="notice"><%= notice %></p>
 
-<h1>Bites</h1>
+<h1 class="headTxt">Bites</h1>
+<p class="link">Here you'll find a list of all of our dishes!</p>
 
 
-
-<div id="bites">
+<div id="bites" class="showCards">
   <% @bites.each do |bite| %>
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="<%=bite.image%>">
+      <img class="card-img-top cardImg" src="<%=bite.image%>">
 
       <div class="card-body">
       
@@ -15,7 +15,7 @@
         <p class="card-text"><%= bite.description%></p>
       </div>
       <ul class="list-group list-group-flush">
-        <l="list-group-item">Price: $<%= bite.price%></li>
+        <li class="list-group-item">Price: $<%= bite.price%></li>
       </ul>
     </div>
     <br/>

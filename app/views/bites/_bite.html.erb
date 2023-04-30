@@ -1,20 +1,10 @@
-<div id="<%= dom_id bite %>">
-
-<img src="<%= bite.image %>">
-    
-
+<div class="headTxt" id="<%= dom_id bite %>">
+    <div class="showImg">
+    <%= image_tag '', class: 'bite-image' %>
+    </div>
   <div>
-    <h2>
-      <%= bite.name %>
-    </h2>
-    <p>
-      <%= bite.description %>
-    </p>
-    <p>
-      <strong>Price: $</strong>
-      <%= bite.price %>
-    </p>
-
+    <h2><%= bite.name %></h2>
+    <p><%= bite.description %></p>
+    <p><strong>Price: $</strong><%= bite.price %></p>
   </div>
-
 </div>
