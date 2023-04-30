@@ -12,6 +12,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem 'devise', '~> 4.9', '>= 4.9.2'
+gem 'paperclip', '~> 6.1'
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
@@ -25,7 +26,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+gem "image_processing", "~> 1.2"
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end

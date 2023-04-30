@@ -6,9 +6,8 @@
 
 <div id="bites" class="showCards">
   <% @bites.each do |bite| %>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top cardImg" src="<%=bite.image%>">
-
+    <div class="card" style="width: 20rem;">
+      <%= image_tag(bite.image, class:"card-img-top cardImg") %>
       <div class="card-body">
       
         <h5 class="card-title"><%= link_to bite.name, bite%></h5>
