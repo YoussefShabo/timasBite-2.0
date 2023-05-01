@@ -1,12 +1,13 @@
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
 <p class="notice"><%= notice %></p>
 
 <%= render @bite %>
 
 
-  <div>
+  <div class="showPgBtn">
     <%= link_to "Edit bite", edit_bite_path(@bite), class:"btn btn-outline-secondary btn-sm link" %>
     <br/>
-    <br/>
+    <%= link_to "Back to bites", bites_path, class:"btn btn-outline-secondary btn-sm link" %>
   </div>
 
-<%= link_to "Back to bites", bites_path, class:"btn btn-outline-secondary btn-sm link" %>
+

@@ -1,0 +1,81 @@
+/* Default styles for all screen sizes */
+.showImg{
+    width: 50vw;
+    object-fit: contain;
+    margin-top: 0;
+}
+.showTxt{
+    width: 45vw;
+}
+.biteDisp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.showPgBtn{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 55%;
+    margin-top: -5%;
+}
+
+/* Styles for screens smaller than 500px */
+@media only screen and (max-width: 500px) {
+    .showImg {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .showTxt {
+        width: 100%;
+        text-align: center;
+        margin-top: 2%;
+    }
+    .biteDisp {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .showPgBtn {
+        margin: 2% auto 5% auto;
+        width: 100px !important;
+
+        
+    }
+}
+
+/* Styles for screens between 500px and 900px */
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .showImg {
+        width: 70%;
+        margin-top: 1rem;
+    }
+    .showTxt {
+        width: 25%;
+    }
+    .showPgBtn {
+        margin-left: 25%;
+        margin-top: 1rem;
+    }
+}
+
+/* Styles for screens larger than 900px */
+@media only screen and (min-width: 901px) {
+    .showImg {
+        width: 50vw;
+        margin-top: 0;
+    }
+    .showTxt {
+        width: 45vw;
+        
+    }
+    .biteDisp {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .showPgBtn {
+        margin-left: 55%;
+        margin-top: -5%;
+    }
+}
