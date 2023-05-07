@@ -31,6 +31,9 @@ gem "image_processing", "~> 1.2"
   # gem "spring"
 end
 
+group :production do
+  # gem 'pg', '0,17,1'
+end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
