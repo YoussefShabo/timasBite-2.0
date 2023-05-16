@@ -32,7 +32,7 @@ gem "image_processing", "~> 1.2"
 end
 
 group :production do
-  # gem 'pg', '0,17,1'
+  gem 'pg', '1.5.3'
 end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
